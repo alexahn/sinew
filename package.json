@@ -1,0 +1,22 @@
+{
+  "name": "@ahn/sinew",
+  "version": "0.0.1",
+  "description": "A universal router",
+  "main": "src/sinew.js",
+  "engines": {
+    "node": "22.18.0"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexahn/sinew.git"
+  },
+  "author": "Alex Ahn",
+  "bugs": {
+    "url": "https://github.com/alexahn/sinew/issues"
+  },
+  "homepage": "https://github.com/alexahn/sinew#readme"
+}
