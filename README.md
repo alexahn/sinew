@@ -177,6 +177,7 @@ pathfinder3.transitionByState("hello", { q: 2, w: 1 }, { a: 30, b: 40 }).then(fu
 
 // start is used from the browser and watches location.href for changes to trigger pathfinder.transitionByURL and on successful transition, will call the director at the associated state
 // initial defines the state to load when the current URL is not a valid state
+// error defines the state to load when a state transition fails
 // push specifies to use the history.pushState methods instead of location methods
 // retry is the number of times to retry a state transition when a state transition encounters an error
 start(pathfinder1, director1, {
