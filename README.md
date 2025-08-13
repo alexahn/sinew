@@ -4,7 +4,7 @@ Sinew is a universal router that uses the URL as the source of state. Sinew allo
 
 ## Usage
 ```
-import { Pathfinder, Director, start, navigate } from "./router.js";
+import { Pathfinder, Director, start, navigate } from "@ahn/sinew";
 
 const pathfinder2 = new Pathfinder(
     {
