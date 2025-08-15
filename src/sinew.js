@@ -421,6 +421,7 @@ function start(pathfinder, director, config = {}) {
 	let previous;
 	let next;
 	let attempt = 0;
+	let failed = false;
 	const { initial, error, push = false, retry = 4, frequency = 32 } = config;
 
 	function load(name, pathParams, searchParams) {
@@ -447,6 +448,7 @@ function start(pathfinder, director, config = {}) {
 
 	setInterval(function () {
 		if (next !== location.href && attempt < retry) {
+			failed = false;
 			previous = next;
 			next = location.href;
 			return pathfinder
@@ -476,7 +478,8 @@ function start(pathfinder, director, config = {}) {
 						console.error(err);
 					}
 				});
-		} else if (next !== location.href && attempt >= retry) {
+		} else if (next !== location.href && attempt >= retry && !failed) {
+			failed = true;
 			if (error) {
 				load(error.name, error.pathParams, error.searchParams);
 			} else {
