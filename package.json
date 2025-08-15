@@ -11,7 +11,11 @@
 		"url": "https://github.com/alexahn/sinew/issues"
 	},
 	"homepage": "https://github.com/alexahn/sinew#readme",
-	"keywords": ["sinew", "universal", "router"],
+	"keywords": [
+		"sinew",
+		"universal",
+		"router"
+	],
 	"engines": {
 		"node": "22.18.0"
 	},

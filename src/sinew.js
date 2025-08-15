@@ -306,6 +306,21 @@ class Pathfinder {
 					};
 				}
 			});
+			let cut = states.length;
+			states.forEach(function (state, idx) {
+				if (state.type === "NEXT") {
+					if (cut === states.length) {
+						cut = idx;
+					}
+				}
+			});
+			const existingStates = states.slice(0, cut).map(function (v) {
+				return v.state;
+			});
+			const newStates = states.slice(cut).map(function (v) {
+				return v.state;
+			});
+			/*
 			const existingStates = states
 				.filter(function (v) {
 					return v.type === "PREVIOUS";
@@ -320,6 +335,7 @@ class Pathfinder {
 				.map(function (v) {
 					return v.state;
 				});
+			*/
 			const existingDependencies = existingStates.reduce(function (dependencies, next) {
 				return {
 					...dependencies,
