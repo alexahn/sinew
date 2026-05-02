@@ -1,6 +1,6 @@
 {
 	"name": "@ahn/sinew",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "A universal router",
 	"repository": {
 		"type": "git",
