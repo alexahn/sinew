@@ -482,6 +482,8 @@ function start(pathfinder, director, config = {}) {
 			failed = true;
 			if (error) {
 				load(error.name, error.pathParams, error.searchParams);
+				attempt = 0;
+				failed = false;
 			} else {
 				console.error(new Error(`State failed to load after ${retry} attempts`));
 			}
